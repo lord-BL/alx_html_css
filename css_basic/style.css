@@ -1,17 +1,26 @@
-.body {
+body {
     display: flex;
     flex-direction: column;
+
 }
-.main {
+main {
     display: flex;
     flex-direction: row;
     flex: auto;
 }
-.article {
+article {
     flex: 2;
     overflow-y: auto;
+    background-color: #e8f5e9;
 }
-.aside {
+aside {
     flex: 1;
     overflow-y: auto;
+    background-color: #e8f5e9;
+}
+header {
+    background-color: #f4f4f4;
+}
+footer {
+    background-color: #f4f4f4;
 }
