@@ -1,0 +1,103 @@
+/* General body styling */
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+p {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Container for results */
+.results {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.image-container {
+  text-align: center;
+}
+
+/* Pentagon shape */
+.pentagon {
+  position: relative;
+  width: 150px; /* Make pentagon bigger */
+  height: 150px; /* Adjust height for a proportional pentagon */
+  background-color: #ff6565;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for text inside pentagon */
+.pentagon h2,
+.pentagon p {
+  color: white; /* White text */
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.pentagon h2 {
+  font-size: 1.2rem; /* Adjust h2 size */
+  font-weight: bold;
+}
+
+.pentagon p {
+  font-size: 0.8rem; /* Adjust p size */
+}
+
+/* Styling for text under pentagon */
+.image-container h2 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.image-container p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .results {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pentagon {
+    width: 120px; /* Adjust pentagon size for smaller screens */
+    height: 120px;
+  }
+
+  .pentagon h2 {
+    font-size: 1rem;
+  }
+
+  .pentagon p {
+    font-size: 0.7rem;
+  }
+
+  .image-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .image-container p {
+    font-size: 0.9rem;
+  }
+}

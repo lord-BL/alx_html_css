@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensures full screen height */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f9f9f9; /* Light background for better aesthetics */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+p {
+  position: relative;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #555;
+}
+
+p::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Position line slightly below the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%; /* Line is slightly longer than the text */
+  height: 2px; /* Thickness of the line */
+  background-color: #555; /* Color of the line */
+}

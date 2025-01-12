@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Source Sans 3", serif;
+}
+.header {
+  background-image: url(images/headphones_hero_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+button {
+  background-color: #ff6565;
+  border-radius: 20px;
+  justify-content: center;
+  color: white;
+  width: 162px;
+  height: 44px;
+  opacity: 0.9;
+  margin-top: 70px;
+  margin-bottom: 150px;
+}
+li {
+  list-style: none;
+}
+li:hover {
+  color: #ff6565;
+}
+.hero ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 300px;
+  margin-top: -70px;
+}
+.hero li {
+  margin: 40px;
+}
+.hero img:first-of-type {
+  margin-left: 300px;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+
+.hero img:last-of-type {
+  margin-right: 0;
+}
+.hero1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  body {
+    max-width: 100%; /* Ensures content takes up full width */
+    margin: 0;
+  }
+}
+#menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+#menu-toggle:checked + .hamburger + ul {
+  display: flex;
+}
+.whatwedo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
+  h2 {
+    font-weight: normal;
+  }
+
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  p.intro {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next row */
+    justify-content: center;
+    gap: 30px; /* Space between each group */
+    margin-top: 20px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column; /* Stack image, h2, and p vertically */
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Space between image, h2, and p */
+  }
+
+  .item img {
+    max-width: 150px; /* Keeps images at a reasonable size */
+    height: auto;
+  }
+
+  .item h2 {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .item p {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  /* Media Query for smaller screens like phones */
+  @media screen and (max-width: 768px) {
+    div {
+      flex-direction: column; /* Stack items vertically */
+      gap: 20px; /* Reduced gap for smaller screens */
+    }
+
+    .item {
+      align-items: center; /* Center-align everything */
+      text-align: center;
+    }
+  }
+}
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  color: white;
+  text-align: center;
+  background-image: url(images/headphones_hero_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.results h1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.results p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.6; /* Improves readability */
+}
+
+.results div {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between images */
+  margin-top: 20px;
+  flex-wrap: wrap; /* Ensures wrapping for smaller screens */
+  margin-bottom: 80px;
+}
+
+.image-container {
+  position: relative; /* Enables positioning text relative to this container */
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.image-container h2 {
+  position: absolute;
+  top: 30%; /* Adjusts position vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 18px;
+  color: white; /* Ensure text is visible */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Adds a shadow for better visibility */
+}
+
+.image-container p {
+  position: absolute;
+  top: 60%; /* Adjusts position vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  margin-bottom: 40px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  div {
+    flex-direction: column; /* Stacks images vertically */
+    gap: 20px;
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensures full screen height */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f9f9f9; /* Light background for better aesthetics */
+}
+
+.contact h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+  margin-top: -900px;
+}
+.contact p {
+  position: relative;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #555;
+}
+
+.contact p::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Position line slightly below the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%; /* Line is slightly longer than the text */
+  height: 2px; /* Thickness of the line */
+  background-color: #555; /* Color of the line */
+}
+.footer {
+  background-color: #071629;
+  margin-top: -800px;
+}
+.footer p {
+  color: #555;
+  text-align: center;
+  margin-top: 180px;
+}
+.social {
+  display: flex;
+  gap: 20px; /* Spacing between icons */
+  justify-content: flex-end;
+}
+
+.social img {
+  display: inline-block;
+  width: 40px; /* Adjust size of icons */
+  height: 40px;
+  margin-right: 40px; /* Right margin for spacing */
+  background-color: white; /* White circular background */
+  border-radius: 50%; /* Makes the icons circular */
+  justify-content: center;
+}
+
+/* What we do section: Apply animation to .item */
+.whatwedo .item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.whatwedo .item:hover {
+  transform: scale(1.1); /* Scale up the item */
+  opacity: 0.8; /* Reduce opacity */
+}
+
+/* Apply a bouncing effect on hover for images in "Our results" */
+.results .image-container {
+  transition: transform 0.3s ease-in-out;
+}
+
+.results .image-container:hover {
+  transform: scale(1.1) rotate(5deg); /* Slight rotation and scaling */
+}
+
+/* Add bounce effect when hovering */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.results .image-container:hover {
+  animation: bounce 0.6s ease;
+}
+
+/* Adding fade-in effect on load for all items in "What we do..." */
+.whatwedo .item {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Specific animation delays for each item */
+.whatwedo .item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.whatwedo .item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.whatwedo .item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.whatwedo .item:nth-child(4) {
+  animation-delay: 0.8s;
+}
